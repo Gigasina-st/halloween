@@ -1,32 +1,175 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#080609">
-<title>عمارت بلک‌وود | مخصوص سما</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#050407">
+<meta name="description" content="یک ماجرای رازآلود هالووین، ساخته‌شده برای سما">
+<title>عمارت خاموش | راز سما</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
-:root{--bg:#080609;--red:#c32740;--light:#f2e7e9;--muted:#b6a7b0}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--light);font-family:'Vazirmatn',sans-serif}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}body:after{content:"";position:fixed;inset:0;z-index:4;pointer-events:none;background:radial-gradient(ellipse at center,transparent 20%,#000 115%)}button{font:inherit;cursor:pointer}.page{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:24px 18px;opacity:0;visibility:hidden;transform:scale(1.025);transition:opacity .7s,transform .8s,visibility .7s;overflow:hidden}.page.active{opacity:1;visibility:visible;transform:scale(1);z-index:2}.inner{position:relative;z-index:2;width:min(100%,760px);max-height:100%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.kicker{color:#d34a5e;font-size:.72rem;letter-spacing:.12em;margin-bottom:16px}.title{font-weight:500;font-size:clamp(2rem,8vw,5rem);line-height:1.25;margin:0;text-shadow:0 0 28px #8b102533}.title em{font-style:normal;color:#e23c55;display:block;font-size:.55em;margin-top:10px}.desc{color:#c5b7c0;font-size:clamp(.9rem,2.6vw,1.08rem);line-height:2.1;max-width:570px;margin:22px auto}.line{height:1px;width:100px;background:linear-gradient(90deg,transparent,#a12b40,transparent);margin:16px auto 24px}.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:10px}.btn{min-height:48px;padding:12px 24px;color:white;background:#86162b;border:1px solid #a02a40;box-shadow:0 0 24px #8a122322;transition:.2s}.btn:hover{background:#ad1d37;transform:translateY(-2px)}.btn.alt{background:#0c090d;border-color:#5b3b48;color:#dfcfd6}.small{font-size:.75rem;color:#93838d;margin-top:16px}.house{position:absolute;bottom:0;width:100%;height:43%;opacity:.3;z-index:0}.fog{position:fixed;z-index:1;inset:-10%;pointer-events:none;background:linear-gradient(110deg,transparent 15%,#b7a2b20c 42%,transparent 65%);animation:fog 13s ease-in-out infinite alternate}@keyframes fog{to{transform:translateX(14%)}}.terminal{direction:rtl;text-align:right;width:min(100%,560px);padding:18px 20px;margin:12px auto 22px;border:1px solid #4c2733;background:#0c090de8;box-shadow:inset 0 0 40px #5e112018}.term-label{color:#bd485b;font-size:.7rem;margin-bottom:12px}.term-text{font-size:clamp(.85rem,2.8vw,1rem);line-height:2;white-space:pre-line;color:#eee0e4;min-height:58px}.blink{animation:blink .8s step-end infinite}@keyframes blink{50%{opacity:0}}.progress{position:fixed;top:0;right:0;height:3px;width:0;background:#d32d49;z-index:12;transition:width .5s}.mark{font-size:2.1rem;color:#c32c44;margin-bottom:12px}.end-card{border:1px solid #572a37;padding:clamp(20px,5vw,42px);background:linear-gradient(145deg,#170b12,#09070a);box-shadow:0 20px 90px #0008;width:min(100%,650px)}.end-title{font-size:clamp(1.45rem,5vw,2.5rem);line-height:1.8}.end-title span{color:#ed536b}.overlay{position:fixed;inset:0;z-index:20;background:#030204;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .08s;padding:20px}.overlay.show{opacity:1;visibility:visible}.face{position:relative;width:min(72vw,330px);aspect-ratio:1;filter:drop-shadow(0 0 30px #bd0027);animation:shake .42s linear}.mask{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 38%,#c8b6b9,#75616c 40%,#191018 68%,#030204 72%);clip-path:polygon(18% 10%,39% 0,63% 2%,82% 17%,91% 43%,80% 70%,67% 87%,60% 100%,39% 100%,31% 85%,15% 69%,7% 42%)}.eye{position:absolute;top:35%;width:24%;height:17%;background:#ff263f;box-shadow:0 0 28px 12px #e50028;border-radius:50%;clip-path:polygon(0 0,100% 10%,70% 100%,30% 100%)}.eye.a{left:20%;transform:rotate(12deg)}.eye.b{right:20%;transform:scaleX(-1) rotate(12deg)}.mouth{position:absolute;top:61%;left:35%;width:30%;height:20%;border-top:5px solid #14080d;border-bottom:8px solid #14080d;background:repeating-linear-gradient(90deg,#d8c6c8 0 5px,#24121a 5px 9px);transform:rotate(-5deg)}.overlay p{font-size:1.15rem;color:white;text-shadow:0 0 15px red;margin-top:24px}@keyframes shake{0%,100%{transform:translate(0)}15%{transform:translate(-8px,3px)}30%{transform:translate(8px,-3px)}45%{transform:translate(-5px,-4px)}60%{transform:translate(5px,4px)}75%{transform:translate(-3px,2px)}}.flash{animation:flash .35s linear 2}@keyframes flash{50%{background:#540010}}.hidden{display:none!important}@media(max-height:620px){.page{padding:12px}.desc{margin:12px auto;line-height:1.8}.title{font-size:clamp(1.8rem,6vh,3.4rem)}.house{height:25%}.terminal{padding:12px;margin:6px auto 10px}.line{margin:8px auto 12px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
-</style></head>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+:root{--ink:#050407;--wine:#5e0719;--blood:#d52b48;--rose:#ff6278;--bone:#f0e4df;--smoke:#c0b0b5;--gold:#b79a69;--ease:cubic-bezier(.2,.75,.25,1)}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--ink);color:var(--bone);font-family:'Vazirmatn',sans-serif}body{isolation:isolate}button{font:inherit;cursor:pointer}button:focus-visible{outline:2px solid var(--rose);outline-offset:4px}::selection{background:#9b1631;color:white}
+#grain{position:fixed;inset:-50%;z-index:40;pointer-events:none;opacity:.075;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");animation:grain .25s steps(2) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(2%,-1%)}50%{transform:translate(-1%,2%)}75%{transform:translate(1%,1%)}100%{transform:translate(-2%,-1%)}}
+#vignette{position:fixed;inset:0;z-index:35;pointer-events:none;background:radial-gradient(ellipse at center,transparent 28%,#0008 74%,#000 125%)}
+#ambience{position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 50% 105%,#34101d 0,transparent 46%),linear-gradient(180deg,#09070c 0%,#100810 55%,#050407 100%);overflow:hidden}
+#moon{position:absolute;width:clamp(90px,17vw,190px);aspect-ratio:1;border-radius:50%;top:7%;left:13%;background:radial-gradient(circle at 36% 30%,#f2dce0,#8d777e 58%,#34232d 72%);box-shadow:0 0 45px #bd778122,0 0 120px #b14c5b16;opacity:.68}
+#moon:after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 30% 65%,#57444e 0 5%,transparent 6%),radial-gradient(circle at 68% 35%,#57444e 0 7%,transparent 8%),radial-gradient(circle at 62% 74%,#57444e 0 4%,transparent 5%);opacity:.5}
+#skyglow{position:absolute;inset:0;background:linear-gradient(100deg,transparent 15%,#a3314810 46%,transparent 70%);animation:sky 12s ease-in-out infinite alternate}
+@keyframes sky{to{transform:translateX(8%);opacity:.5}}
+#rain{position:absolute;inset:-30% 0 0;background-image:repeating-linear-gradient(102deg,transparent 0 39px,#d4c6d00a 40px,#d4c6d03d 41px,transparent 42px,transparent 75px);background-size:100% 160px;animation:rain 1s linear infinite;opacity:.38}
+@keyframes rain{to{transform:translateY(160px) translateX(-15px)}}
+#fog{position:absolute;inset:30% -40% -20%;background:radial-gradient(ellipse at 20% 60%,#c2b1bc18,transparent 38%),radial-gradient(ellipse at 70% 40%,#d4c6d010,transparent 42%),radial-gradient(ellipse at 50% 80%,#a0a0a016,transparent 45%);filter:blur(22px);animation:fog 17s ease-in-out infinite alternate}
+@keyframes fog{to{transform:translateX(12%) translateY(-5%) scale(1.1)}}
+#house{position:absolute;bottom:-1px;width:100%;height:min(54vh,440px);min-height:230px;filter:drop-shadow(0 -8px 30px #17060d)}
+#house .lit{animation:windowlight 7s infinite}
+@keyframes windowlight{0%,20%,22%,54%,56%,100%{opacity:.72}21%,55%{opacity:.08}}
+#embers{position:absolute;inset:0;overflow:hidden;pointer-events:none}.ember{position:absolute;bottom:-12px;width:2px;height:2px;border-radius:50%;background:#e74756;box-shadow:0 0 8px 2px #bc223a;animation:rise var(--d) linear infinite;opacity:0}
+@keyframes rise{10%{opacity:.7}90%{opacity:.4}100%{transform:translate(var(--x),-110vh) scale(.2);opacity:0}}
+#progress{position:fixed;top:0;right:0;height:2px;width:0;background:linear-gradient(90deg,#761025,#ff6478);z-index:60;box-shadow:0 0 12px #e52c4d;transition:width .9s var(--ease)}
+#chapter{position:fixed;top:20px;right:24px;z-index:10;font-size:.72rem;color:#bca9b0;letter-spacing:.04em;opacity:0;transition:opacity .5s}
+#chapter.show{opacity:1}
+#sound{position:fixed;top:15px;left:16px;z-index:70;border:1px solid #ffffff22;background:#08060ab8;color:#d8c6cc;padding:8px 12px;font-size:.75rem;backdrop-filter:blur(12px);border-radius:2px}
+#sound .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#8a6e78;margin-left:7px;vertical-align:middle}
+#sound.on .dot{background:#ff536b;box-shadow:0 0 9px #ff536b}
+#pages{position:fixed;inset:0;z-index:2}
+.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:68px 22px 30px;opacity:0;visibility:hidden;transform:translateY(18px) scale(1.015);transition:opacity .8s var(--ease),transform 1s var(--ease),visibility .8s;overflow:hidden}
+.page.active{opacity:1;visibility:visible;transform:none}
+.page.out{opacity:0;transform:translateY(-18px) scale(.985)}
+.content{position:relative;z-index:4;width:min(100%,790px);max-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.eyebrow{font-size:.72rem;color:#df6578;letter-spacing:.13em;margin-bottom:17px;display:flex;align-items:center;gap:10px}
+.eyebrow:before,.eyebrow:after{content:"";width:28px;height:1px;background:#8b2b3d}
+h1,h2,p{margin-top:0}.hero-title{font-size:clamp(2.6rem,9vw,7rem);line-height:1.1;font-weight:500;letter-spacing:-.055em;margin:0;text-shadow:0 4px 50px #d5214422}
+.hero-title span{display:block;font-size:.35em;font-weight:300;letter-spacing:.2em;color:#d94b63;margin-top:22px}
+h2{font-size:clamp(1.65rem,5.3vw,3.7rem);line-height:1.5;font-weight:500;margin-bottom:12px}
+p{font-size:clamp(.9rem,2.4vw,1.06rem);line-height:2.15;color:#cbbbc2;max-width:620px;margin-bottom:20px}
+p strong{color:#f0dfe3;font-weight:600}
+.rule{width:110px;height:1px;margin:22px auto;background:linear-gradient(90deg,transparent,#b83b51,transparent)}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin-top:10px}
+.btn{position:relative;isolation:isolate;min-height:49px;padding:12px 23px;border:1px solid #923146;background:linear-gradient(135deg,#6f1026,#390b18);color:#fff;box-shadow:0 10px 40px #0005,0 0 28px #9c16301c;transition:transform .25s,box-shadow .3s,border-color .3s;overflow:hidden}
+.btn:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(110deg,transparent 25%,#ffffff22 50%,transparent 75%);transform:translateX(130%);transition:transform .7s}
+.btn:hover:before{transform:translateX(-130%)}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 45px #c31c3a26;border-color:#e85b70}
+.btn.ghost{background:#08060b9c;border-color:#5c424d;color:#dfd0d6}.btn:active{transform:scale(.98)}
+.micro{font-size:.72rem;color:#8f7d87;margin-top:17px}
+.doorframe{position:absolute;inset:8% 50% 0;transform:translateX(50%);width:min(72vw,580px);border:1px solid #5b2c3a44;border-bottom:0;border-radius:48% 48% 0 0;box-shadow:inset 0 0 50px #a3263910,0 0 80px #0008;pointer-events:none}
+.doorframe:before{content:"";position:absolute;inset:4% 7% 0;border:1px solid #63334345;border-bottom:0;border-radius:48% 48% 0 0}
+.seal{width:72px;height:72px;border:1px solid #8d3447;border-radius:50%;display:grid;place-items:center;color:#d94b62;font-size:1.8rem;margin-bottom:24px;box-shadow:0 0 35px #9f19321a}
+.letter{width:min(100%,620px);border:1px solid #6e3444;background:linear-gradient(145deg,#110b10ee,#08060bee);padding:clamp(20px,4vw,38px);box-shadow:0 20px 100px #0009;position:relative}
+.letter:before{content:"";position:absolute;inset:7px;border:1px solid #a47b6b20;pointer-events:none}
+.terminal{width:min(100%,590px);text-align:right;padding:20px 22px;border:1px solid #542635;background:#050408d9;box-shadow:inset 0 0 40px #a51a2a0b,0 15px 55px #0006;margin:14px 0 20px;position:relative}
+.terminal:before{content:"";position:absolute;top:-1px;right:20px;width:55px;height:1px;background:#e04b63;box-shadow:0 0 12px #e04b63}
+.term-head{font-size:.7rem;color:#b3485c;margin-bottom:12px}.term-body{white-space:pre-line;line-height:2.1;color:#f1e3e7;font-size:clamp(.85rem,2.7vw,1rem);min-height:54px}
+.type-cursor{display:inline-block;width:7px;height:1em;background:#e54b64;vertical-align:middle;animation:blink .75s steps(2) infinite}@keyframes blink{50%{opacity:0}}
+.portrait{width:clamp(110px,22vw,170px);height:clamp(145px,28vw,210px);border:5px solid #2c1b23;outline:1px solid #76505c;background:linear-gradient(180deg,#161019,#050407);margin:0 auto 20px;position:relative;box-shadow:0 0 50px #000;overflow:hidden}
+.portrait:before{content:"";position:absolute;left:27%;top:14%;width:46%;height:52%;border-radius:50% 50% 36% 36%;background:radial-gradient(ellipse at 50% 35%,#99858b 0 10%,#5a4651 36%,#171019 70%);filter:blur(1px)}
+.portrait:after{content:"";position:absolute;left:16%;right:16%;bottom:-22%;height:57%;background:#0a080d;border-radius:50% 50% 0 0;box-shadow:0 -6px 25px #8e25331a}
+.portrait .glint{position:absolute;z-index:2;top:35%;left:34%;width:8px;height:3px;background:#e34c60;box-shadow:25px 0 #e34c60,0 0 10px #ff253e,25px 0 10px #ff253e;opacity:0;animation:eyes 8s infinite}
+@keyframes eyes{0%,45%,49%,100%{opacity:0}46%,48%{opacity:.8}}
+.seal-icon{font-size:2.1rem;color:#c7445a;margin:0 0 12px}
+.count{font-size:clamp(2rem,7vw,4rem);font-weight:300;letter-spacing:.18em;color:#e4c7ce;text-shadow:0 0 25px #c51d3b35}
+.end-title{font-size:clamp(1.65rem,5.7vw,3.5rem);line-height:1.6}.end-title span{color:#f15a71;text-shadow:0 0 28px #b816332c}
+.endline{color:#e6bac4}
+#jumpscare{position:fixed;inset:0;z-index:90;background:#020103;display:flex;align-items:center;justify-content:center;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .06s;padding:18px}
+#jumpscare.show{opacity:1;visibility:visible}
+.monster{position:relative;width:min(70vw,370px);aspect-ratio:.9;filter:drop-shadow(0 0 35px #d0002a);animation:jerk .45s linear}
+.monster-head{position:absolute;inset:2% 6% 0;background:radial-gradient(ellipse at 50% 35%,#c7b7b9 0,#84747c 30%,#31212b 57%,#08060a 75%);clip-path:polygon(18% 8%,38% 0,62% 2%,82% 15%,94% 38%,84% 62%,74% 78%,65% 100%,36% 98%,26% 80%,13% 65%,5% 39%);filter:contrast(1.3)}
+.monster-head:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(175deg,transparent 0 8px,#0003 9px 10px);opacity:.4}
+.m-eye{position:absolute;z-index:2;top:34%;width:24%;height:15%;background:#ff1b3f;box-shadow:0 0 15px 8px #ff092f,0 0 45px 20px #b90029;border-radius:50% 50% 20% 20%;clip-path:polygon(0 0,100% 0,72% 100%,25% 100%)}
+.m-eye.one{left:20%;transform:rotate(8deg)}.m-eye.two{right:20%;transform:scaleX(-1) rotate(8deg)}
+.m-mouth{position:absolute;z-index:3;left:32%;top:59%;width:36%;height:22%;background:repeating-linear-gradient(90deg,#e4d5d4 0 7px,#140a10 7px 12px);border-top:7px solid #13080d;border-bottom:9px solid #13080d;clip-path:polygon(0 0,100% 5%,85% 100%,15% 100%)}
+#scareCaption{font-size:clamp(1rem,4vw,1.4rem);letter-spacing:.08em;color:#fff;margin-top:18px;text-shadow:0 0 18px red}
+@keyframes jerk{0%,100%{transform:translate(0) scale(1)}12%{transform:translate(-10px,5px) scale(1.06)}25%{transform:translate(8px,-5px) scale(.98)}38%{transform:translate(-7px,-3px) scale(1.04)}52%{transform:translate(7px,4px)}70%{transform:translate(-3px,2px) scale(1.02)}}
+body.hit{animation:redhit .22s linear 3}@keyframes redhit{50%{background:#50000f}}
+#flash{position:fixed;inset:0;background:#f5e7e8;z-index:89;opacity:0;pointer-events:none}
+#flash.pop{animation:flashpop .38s ease-out}@keyframes flashpop{0%{opacity:.8}100%{opacity:0}}
+#hint{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:9;font-size:.67rem;color:#776872;white-space:nowrap;opacity:.75}
+@media(max-height:650px){.page{padding:54px 18px 18px}.eyebrow{margin-bottom:8px}h2{margin-bottom:6px}.rule{margin:10px auto}.desc,p{line-height:1.8;margin-bottom:10px}.terminal{padding:12px 15px;margin:7px 0 12px}.portrait{height:115px;width:85px;margin-bottom:10px}.seal{width:50px;height:50px;margin-bottom:10px}.letter{padding:18px}.house{height:35vh}}
+@media(max-width:460px){#chapter{right:12px;top:17px;font-size:.65rem}.page{padding:58px 17px 28px}.actions{width:100%}.btn{padding:11px 16px}.actions .btn{flex:1 1 42%}.hero-title{font-size:clamp(2.7rem,12vw,4.3rem)}#sound{font-size:.68rem;padding:7px 9px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
 <body>
-<div class="progress" id="progress"></div><div class="fog"></div>
-<svg class="house" viewBox="0 0 900 330" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><path fill="#000" d="M0 330V230h90v-72l65-35 65 35v-55l55-40 55 40v95h48V92l70-65 70 65v80h40v-60l55-35 55 35v85h70v-55l40-25 40 25v188z"/><path stroke="#873143" stroke-width="2" fill="none" d="M115 330V180h75v150M285 330V80h55v250M430 330V105h65v225M610 330V135h65v195"/></svg>
-<section class="page active" id="p0"><div class="inner"><div class="kicker">یک تجربه‌ی ویژه برای شب هالووین</div><h1 class="title">عمارت بلک‌وود<em>رازِ نیمه‌شب</em></h1><div class="line"></div><p class="desc">سما، دعوت‌نامه‌ای عجیب به دستت رسیده...<br>می‌گن هیچ‌کس از این عمارت بیرون نرفته، مگر اینکه راز اون رو پیدا کرده باشه.</p><button class="btn" id="start">وارد عمارت می‌شوم</button><p class="small">اگر دوست داشتی، صدای گوشی رو روشن کن؛ صدا در این تجربه اختیاریه.</p></div></section>
-<section class="page" id="p1"><div class="inner"><div class="kicker">مرحله‌ی اول · ورود</div><h2 class="title" style="font-size:clamp(1.8rem,6vw,3.5rem)">عمارت تو رو می‌شناسه، سما.</h2><p class="desc">درِ بزرگ پشت سرت بسته می‌شه. از طبقه‌ی بالا صدای قدم می‌آد... اما نگهبان قسم می‌خوره سال‌هاست اینجا تنهاست.</p><div class="terminal"><div class="term-label">سامانه‌ی امنیتی عمارت</div><div class="term-text" id="t1"></div></div><div class="btns"><button class="btn" id="up">به سمت صدا بروم</button><button class="btn alt" id="exit">دنبال خروج بگردم</button></div></div></section>
-<section class="page" id="p2"><div class="inner"><div class="kicker">مرحله‌ی دوم · تصویر قدیمی</div><h2 class="title" style="font-size:clamp(1.8rem,6vw,3.5rem)">یک قاب خاک‌گرفته</h2><p class="desc">روی دیوار، تصویر قدیمی دختری دیده می‌شه. پشت قاب، کلیدی سرد و یادداشتی با دست‌خط لرزان پنهان شده.</p><div class="terminal"><div class="term-label">یادداشت پیدا شده · سی‌ویکم اکتبر</div><div class="term-text" id="t2">«اگر این نوشته را می‌خوانی، یعنی تا اینجا شجاع بودی. کلید، درِ آخر را باز می‌کند؛ اما چیزی پشت سرت منتظر است...»</div></div><p class="desc" style="margin-top:0">روی کلید حک شده: <strong style="color:#e54b62">س · ۳۱ · قلب</strong></p><button class="btn" id="key">قفل اتاق آخر را باز کنم</button></div></section>
-<section class="page" id="p3"><div class="inner"><div class="kicker">مرحله‌ی سوم · درِ آخر</div><h2 class="title" style="font-size:clamp(1.8rem,6vw,3.5rem)">پشت سرت رو نگاه نکن.</h2><p class="desc">روی در نوشته شده: «سه ثانیه صبر کن تا راز عمارت آشکار شود.»<br>صدای نفس کشیدن نزدیک‌تر می‌شه...</p><div class="terminal"><div class="term-label">شمارش معکوس</div><div class="term-text" id="count" style="text-align:center;font-size:2rem">۳</div></div><button class="btn" id="reveal">راز را آشکار کن</button></div></section>
-<section class="page" id="p4"><div class="inner"><div class="kicker">راز عمارت پیدا شد</div><div class="end-card"><div class="mark">✦</div><div class="end-title">راز عمارت این بود که...<br><span>تو از اول مهمون ویژه‌ی من بودی.</span></div><div class="line"></div><p class="desc">سما، هالووین مبارک! 🎃<br>شاید این عمارت پر از سایه و راز باشه، اما قشنگ‌ترین اتفاق امشب اینه که تونستم یه لبخند روی لبت بیارم.</p><p class="desc" style="color:#e8b9c2">بعضی رازها برای ترسوندن نیستن؛ برای اینن که به یه نفر بگن چقدر خاصه. 🖤</p><div class="kicker" style="margin:20px 0 0">با عشق و کمی شیطنت، برای سما</div></div><button class="btn alt" id="restart" style="margin-top:18px">از اول تجربه کن</button></div></section>
-<div class="overlay" id="scare" role="dialog" aria-modal="true" aria-label="لحظه‌ی ترسناک"><div class="face"><div class="mask"></div><div class="eye a"></div><div class="eye b"></div><div class="mouth"></div></div><p>پشت سرت رو نگاه نکن!</p></div>
+<div id="ambience"><div id="moon"></div><div id="skyglow"></div><div id="rain"></div><div id="fog"></div><div id="embers"></div>
+<svg id="house" viewBox="0 0 1000 460" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs><linearGradient id="stone" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#171019"/><stop offset="1" stop-color="#030306"/></linearGradient><linearGradient id="window" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#d94a53"/><stop offset="1" stop-color="#45101d"/></linearGradient></defs>
+<path fill="url(#stone)" d="M0 460V295h80v-76l55-40 55 40v76h60V165l80-62 80 62v135h70V125l85-92 85 92v170h68V192l60-44 60 44v103h62v-67l55-35 55 35v192z"/>
+<path fill="#08060a" stroke="#36202a" stroke-width="4" d="M350 460V300a150 150 0 0 1 300 0v160z"/>
+<path fill="#140a11" stroke="#5b2635" stroke-width="3" d="M380 460V303a120 120 0 0 1 240 0v157z"/>
+<path d="M500 460V190" stroke="#4d2430" stroke-width="3"/><circle cx="514" cy="340" r="4" fill="#b88d66"/>
+<g class="lit" fill="url(#window)" opacity=".72"><path d="M112 300v-50a23 23 0 0 1 46 0v50z"/><path d="M293 292v-62a28 28 0 0 1 56 0v62z"/><path d="M420 265v-70a25 25 0 0 1 50 0v70z"/><path d="M532 265v-70a25 25 0 0 1 50 0v70z"/><path d="M712 292v-62a28 28 0 0 1 56 0v62z"/><path d="M870 300v-50a23 23 0 0 1 46 0v50z"/></g>
+<g fill="#050407"><path d="M0 420l70-20 40 22 55-15 70 28 60-22 45 20 70-10 55 20 55-15 65 18 70-23 55 20 70-16 55 21 65-22 70 15v39H0z"/></g>
+</svg></div>
+<div id="grain"></div><div id="vignette"></div><div id="progress"></div><div id="chapter"></div>
+<button id="sound" aria-pressed="false"><span class="dot"></span>صدای عمارت: خاموش</button>
+<div id="pages">
+<section class="page active" data-chapter="دعوت‌نامه‌ی مهر و موم‌شده"><div class="doorframe"></div><div class="content">
+<div class="eyebrow">یک شب · یک عمارت · یک راز</div>
+<h1 class="hero-title">عمارت خاموش<span>داستانی مخصوص سما</span></h1>
+<div class="rule"></div>
+<p>سما، نامه‌ای به دستت رسیده که هیچ نشانی‌ای ندارد.<br>فقط یک جمله روی آن نوشته شده:<br><strong>«امشب، عمارت بالاخره منتظرت است.»</strong></p>
+<div class="seal">✦</div>
+<button class="btn" id="begin">مهر نامه را باز کن</button>
+<div class="micro">بهتره چراغ‌ها کمی کم باشن... صدا هم کاملاً اختیاریه.</div>
+</div></section>
+<section class="page" data-chapter="مرحله‌ی اول · راهروی بی‌انتها"><div class="content">
+<div class="eyebrow">مرحله‌ی اول · ورود</div><h2>در پشت سرت بسته شد.</h2>
+<p>صدای قفل در راهرو می‌پیچه. بوی بارون و چوب خیس همه‌جا رو گرفته. بالای پله‌ها، چراغی روشن و خاموش می‌شه؛ انگار کسی داره باهات علامت می‌ده.</p>
+<div class="terminal"><div class="term-head">یادداشت نگهبان عمارت</div><div class="term-body" id="terminal1"></div></div>
+<p>از انتهای راهرو صدای قدم می‌آد. عجیب اینه که هر بار می‌ایستی، قدم‌ها هم متوقف می‌شن.</p>
+<div class="actions"><button class="btn" id="stairs">از پله‌ها بالا بروم</button><button class="btn ghost" id="door">درِ خروج را امتحان کنم</button></div>
+</div></section>
+<section class="page" data-chapter="مرحله‌ی دوم · پرتره‌ی بی‌چهره"><div class="content">
+<div class="eyebrow">مرحله‌ی دوم · اتاق پرتره‌ها</div><div class="portrait"><span class="glint"></span></div>
+<h2>این تصویر نباید اینجا باشد.</h2>
+<p>روی میز، پرتره‌ای خاک‌گرفته پیدا می‌کنی. چهره محو شده، اما پشت قاب چیزی می‌درخشه؛ یک کلید کوچک با حرف «س» و یک یادداشت.</p>
+<div class="letter"><div class="term-head">یادداشتِ پشت قاب</div><p style="margin:0">«اگر تا اینجا آمده‌ای، یعنی خانه تو را پذیرفته. کلید درِ آخر را باز می‌کند. اما وقتی صدای ضربه را شنیدی... به هیچ‌کس جواب نده.»</p></div>
+<button class="btn" id="takekey">کلید را بردارم</button>
+</div></section>
+<section class="page" data-chapter="مرحله‌ی سوم · صدای پشت در"><div class="content">
+<div class="eyebrow">مرحله‌ی سوم · درِ آخر</div><h2>سه ضربه به در خورد.</h2>
+<p>تق... تق... تق...<br>صدایی از آن طرف در می‌گه: «سما؟ می‌دونم اونجایی...»<br>اما تو هنوز به هیچ‌کس نگفتی اسمت چیه.</p>
+<div class="terminal"><div class="term-head">نوشته‌ی حک‌شده روی قفل</div><div class="term-body">«برای دیدن حقیقت، تا پایان شمارش صبر کن.»</div></div>
+<div class="count" id="count">۰۳</div>
+<div class="micro">نفس عمیق بکش. در داره باز می‌شه.</div>
+</div></section>
+<section class="page" data-chapter="مرحله‌ی چهارم · حقیقت"><div class="content">
+<div class="eyebrow">مرحله‌ی چهارم · آخرین سرنخ</div><div class="seal">☾</div>
+<h2>یک جعبه‌ی کوچک روی میز است.</h2>
+<p>داخلش یک تکه کاغذ و یک روبان سیاهه. روی کاغذ نوشته شده: «بعضی رازها ترسناک به نظر می‌رسن، تا وقتی که درشون رو باز کنی.»</p>
+<div class="terminal"><div class="term-head">برای باز کردن جعبه</div><div class="term-body">رمز سه‌رقمی را از روی سرنخ‌ها پیدا کن: روز هالووین، کنار حرف اول اسم تو.</div></div>
+<div class="actions"><button class="btn" id="openbox">جعبه را باز کن</button><button class="btn ghost" id="hint">یک سرنخ دیگر</button></div>
+<p id="hinttext" class="micro" style="min-height:20px"></p>
+</div></section>
+<section class="page" data-chapter="راز نهایی · برای سما"><div class="content">
+<div class="eyebrow">راز عمارت آشکار شد</div><div class="letter">
+<div class="seal-icon">✦</div>
+<h2 class="end-title">راز عمارت این بود که...<br><span>تو از اول مهمون ویژه‌ی من بودی.</span></h2>
+<div class="rule"></div>
+<p>سما، هالووین مبارک! 🎃🖤</p>
+<p>تمام این راهروها، صداها و رازها فقط برای رسیدن به همین لحظه بودن؛ برای اینکه یه لبخند روی لبت بیارم و یه خاطره‌ی متفاوت برات بسازم.</p>
+<p class="endline">دنیا هرچقدر هم تاریک باشه، بعضی آدما خودشون دلیل روشن موندن چراغان.</p>
+<p style="font-size:.82rem;color:#bd8e9a;margin-bottom:0">این عمارت شاید تسخیر شده باشه؛ اما این سورپرایز فقط و فقط برای توئه.</p>
+</div>
+<button class="btn ghost" id="again" style="margin-top:18px">از اول، اگر جرئتش را داری</button>
+</div></section>
+</div>
+<div id="flash"></div>
+<div id="jumpscare" role="dialog" aria-modal="true" aria-label="لحظه‌ی ترسناک"><div class="monster"><div class="monster-head"></div><div class="m-eye one"></div><div class="m-eye two"></div><div class="m-mouth"></div></div><div id="scareCaption">بهت گفته بودم برنگردی...</div></div>
+<div id="hint" style="display:none"></div>
 <script>
-const pages=[...document.querySelectorAll('.page')];const progress=document.getElementById('progress');let audio=null,sound=false,timer=null;
-function go(n){pages.forEach((p,i)=>p.classList.toggle('active',i===n));progress.style.width=((n+1)/pages.length*100)+'%'}
-function type(el,text,speed=34){el.textContent='';let i=0;clearInterval(el._timer);el._timer=setInterval(()=>{el.textContent+=text[i++]||'';if(i>=text.length)clearInterval(el._timer)},speed)}
-function beep(f=130,d=.18,w='sine'){if(!sound)return;try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();let o=audio.createOscillator(),g=audio.createGain();o.type=w;o.frequency.value=f;g.gain.value=.035;o.connect(g);g.connect(audio.destination);o.start();g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+d);o.stop(audio.currentTime+d)}catch(e){}}
-function scare(next){let s=document.getElementById('scare');s.classList.add('show');document.body.classList.add('flash');beep(65,.6,'sawtooth');setTimeout(()=>{s.classList.remove('show');document.body.classList.remove('flash');go(next)},1500)}
-document.getElementById('start').onclick=()=>{go(1);type(document.getElementById('t1'),'مهمان شناسایی شد: سما\nوضعیت: منتظرش بودیم\nهشدار: چیزی دنبالت می‌آید...',35);beep(100,.3,'triangle')};
-document.getElementById('up').onclick=()=>scare(2);
-document.getElementById('exit').onclick=()=>{type(document.getElementById('t1'),'خروج قفل شده است...\nتلاش خوبی بود، سما.\nاین خانه رازی برای تو دارد...',30);setTimeout(()=>scare(2),1800)};
-document.getElementById('key').onclick=()=>{go(3);let n=3,el=document.getElementById('count');el.textContent='۳';clearInterval(timer);timer=setInterval(()=>{n--;el.textContent=n>0?['','', '۲','۱'][n]||String(n):'اکنون';beep(100+n*25,.12);if(n<=0)clearInterval(timer)},1000)};
-document.getElementById('reveal').onclick=()=>scare(4);
-document.getElementById('restart').onclick=()=>{clearInterval(timer);sound=false;go(0)};
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('scare').classList.remove('show');document.body.classList.remove('flash')}});
+const pages=[...document.querySelectorAll('.page')],progress=document.getElementById('progress'),chapter=document.getElementById('chapter');let audioCtx=null,sound=false,ambientTimer=null,countTimer=null,advanceTimer=null,seenScare=false;
+function go(i){clearTimeout(advanceTimer);pages.forEach((p,j)=>{p.classList.toggle('active',j===i);p.classList.remove('out')});progress.style.width=((i+1)/pages.length*100)+'%';chapter.textContent=pages[i].dataset.chapter;chapter.classList.toggle('show',i>0);if(i===1)type(document.getElementById('terminal1'),'مهمان: سما\nوضعیت: منتظرش بودیم\nیادداشت: اگر صدایت کرد، عجله نکن...',32)}
+function type(el,text,speed=32){clearInterval(el._typing);el.textContent='';let i=0;el._typing=setInterval(()=>{el.textContent+=text.charAt(i++);if(i>=text.length)clearInterval(el._typing)},speed)}
+function beep(freq=110,dur=.22,wave='sine',vol=.035){if(!sound)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=wave;o.frequency.value=freq;g.gain.value=vol;o.connect(g);g.connect(audioCtx.destination);o.start();g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+dur);o.stop(audioCtx.currentTime+dur)}catch(e){}}
+function ambient(){clearTimeout(ambientTimer);if(!sound)return;beep(48+Math.random()*24,1.3,'sine',.012);ambientTimer=setTimeout(ambient,1700+Math.random()*1800)}
+function burst(next,caption='بهت گفته بودم برنگردی...'){const el=document.getElementById('jumpscare'),fl=document.getElementById('flash');document.getElementById('scareCaption').textContent=caption;el.classList.add('show');fl.classList.remove('pop');void fl.offsetWidth;fl.classList.add('pop');document.body.classList.add('hit');beep(58,.65,'sawtooth',.075);setTimeout(()=>document.body.classList.remove('hit'),700);setTimeout(()=>{el.classList.remove('show');go(next)},1350)}
+function createEmbers(){const wrap=document.getElementById('embers');for(let i=0;i<26;i++){let e=document.createElement('i');e.className='ember';e.style.left=Math.random()*100+'%';e.style.setProperty('--d',(9+Math.random()*15)+'s');e.style.setProperty('--x',(Math.random()*160-80)+'px');e.style.animationDelay=(-Math.random()*20)+'s';e.style.opacity=(Math.random()*.5).toString();wrap.appendChild(e)}}createEmbers();
+document.getElementById('sound').onclick=()=>{sound=!sound;let b=document.getElementById('sound');b.classList.toggle('on',sound);b.setAttribute('aria-pressed',String(sound));b.innerHTML='<span class="dot"></span>صدای عمارت: '+(sound?'روشن':'خاموش');if(sound){ambient();beep(90,.4,'triangle')}else clearTimeout(ambientTimer)};
+document.getElementById('begin').onclick=()=>{go(1);beep(70,.4,'triangle')};
+document.getElementById('stairs').onclick=()=>{beep(90,.3,'triangle');burst(2,'نباید اینجا می‌اومدی...')};
+document.getElementById('door').onclick=()=>{beep(55,.5,'sawtooth');burst(2,'در خروجی قفل شده است...')};
+document.getElementById('takekey').onclick=()=>{go(3);let n=3,el=document.getElementById('count');el.textContent='۰۳';clearInterval(countTimer);countTimer=setInterval(()=>{n--;el.textContent=n===2?'۰۲':n===1?'۰۱':'۰۰';beep(95+n*25,.15,'sine',.03);if(n<=0){clearInterval(countTimer);advanceTimer=setTimeout(()=>burst(4,'صدای پشت سرت نبود...'),650)}},1000)};
+document.getElementById('openbox').onclick=()=>burst(5,'این بار... حقیقت منتظرته.');
+document.getElementById('hint').onclick=()=>{document.getElementById('hinttext').textContent='سرنخ: آخرین روز اکتبر؛ عددی که روی نامه‌ی اول دیدی.';beep(160,.15,'sine')};
+document.getElementById('again').onclick=()=>{clearInterval(countTimer);clearTimeout(ambientTimer);sound=false;let b=document.getElementById('sound');b.classList.remove('on');b.setAttribute('aria-pressed','false');b.innerHTML='<span class="dot"></span>صدای عمارت: خاموش';document.getElementById('hinttext').textContent='';go(0)};
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&sound){clearTimeout(ambientTimer)}else if(!document.hidden&&sound)ambient()});
 </script></body></html>
