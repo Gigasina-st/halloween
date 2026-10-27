@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080609">
+<meta name="description" content="A mysterious Halloween experience made just for Sama.">
+<title>THE BLACKWOOD ESTATE — For Sama</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+:root{--bg:#080609;--panel:#100c11;--red:#b51f31;--red2:#f13a4c;--muted:#a79aa5;--cream:#f2e8dd}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:'Vazirmatn',sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:4;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:3;background:radial-gradient(ellipse at center,transparent 30%,#000 110%)}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:2px solid #ff6775;outline-offset:4px}
+.hidden{display:none!important}
+.cinzel{font-family:'Cinzel',serif;letter-spacing:.12em}
+.screen{position:relative;z-index:1;min-height:100svh;display:grid;place-items:center;padding:28px 18px}
+.hero{width:min(100%,900px);text-align:center;position:relative}
+.eyebrow{font:500 .72rem 'Cinzel',serif;letter-spacing:.34em;color:#d84a58;margin-bottom:22px}
+h1{font:500 clamp(2.2rem,8vw,5.9rem)/1.06 'Cinzel',serif;letter-spacing:.04em;margin:0;text-shadow:0 0 32px #8b122b66}
+h1 span{display:block;color:var(--red2);font-size:.52em;margin-top:18px;letter-spacing:.24em}
+.subtitle{color:#b7aab3;max-width:540px;margin:26px auto 34px;line-height:2;font-size:clamp(.9rem,2.4vw,1.05rem)}
+.rule{height:1px;width:100px;margin:28px auto;background:linear-gradient(90deg,transparent,#96303e,transparent)}
+.primary,.secondary{border:1px solid #7d2835;background:#7c1426;color:#fff;padding:14px 25px;min-height:50px;letter-spacing:.06em;transition:.25s;box-shadow:0 0 25px #8b102522}
+.primary:hover{background:#a31c32;box-shadow:0 0 35px #e42b4544;transform:translateY(-2px)}
+.secondary{background:transparent;color:#d7c9cf;border-color:#55404b}
+.secondary:hover{border-color:#bd3d4c;color:white}
+.micro{font-size:.76rem;color:#8e818a;margin-top:18px}
+.mansion{position:absolute;inset:auto 0 0;opacity:.22;width:100%;height:min(45vh,340px);pointer-events:none}
+.mist{position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.22;background:linear-gradient(105deg,transparent 10%,#b4a2b311 40%,transparent 65%);animation:mist 16s ease-in-out infinite alternate}
+@keyframes mist{from{transform:translateX(-18%)}to{transform:translateX(18%)}}
+@keyframes flicker{0%,18%,22%,58%,62%,100%{opacity:1}20%,60%{opacity:.35}}
+.flicker{animation:flicker 5s infinite}
+.story-wrap{width:min(100%,760px);text-align:center}
+.chapter{font: .7rem 'Cinzel',serif;letter-spacing:.3em;color:#b63c4b;margin-bottom:20px}
+.story-title{font:500 clamp(1.6rem,5vw,3.3rem)/1.3 'Cinzel','Vazirmatn',serif;margin:0 0 18px}
+.story-copy{line-height:2.2;color:#c7bac3;font-size:1rem;max-width:600px;margin:0 auto 30px}
+.terminal{border:1px solid #4c2632;background:#0c090de8;text-align:left;direction:ltr;padding:20px 22px;margin:28px auto;max-width:580px;min-height:130px;box-shadow:inset 0 0 40px #5e112018}
+.terminal-label{font: .65rem 'Cinzel',serif;letter-spacing:.2em;color:#ad3c4d;margin-bottom:15px}
+.terminal-line{font:clamp(.83rem,2.8vw,1rem)/1.8 monospace;color:#e6d6dc;white-space:pre-wrap}
+.cursor{display:inline-block;width:8px;height:1em;background:#c13b4c;vertical-align:middle;animation:blink .8s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.choices{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.progress{position:fixed;top:0;left:0;height:2px;background:#c42b42;width:0;z-index:10;transition:width .6s}
+.symbol{font-size:2rem;color:#a32b3c;margin-bottom:20px}
+.final-card{border:1px solid #5b2735;background:linear-gradient(150deg,#150b12,#09070a);padding:clamp(24px,5vw,48px);max-width:660px;margin:0 auto;box-shadow:0 20px 90px #0008}
+.secret{font:500 clamp(1.4rem,4.8vw,2.6rem)/1.5 'Cinzel','Vazirmatn',serif;color:#f1dfe3}
+.secret span{color:#f04b61}
+.footer{color:#756771;font-size:.7rem;margin-top:34px;letter-spacing:.08em}
+#scareOverlay{position:fixed;inset:0;z-index:30;background:#030204;display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .08s}
+#scareOverlay.show{opacity:1;visibility:visible}
+.scare-face{width:min(76vw,360px);aspect-ratio:1;position:relative;filter:drop-shadow(0 0 35px #b80024)}
+.skull{width:100%;height:100%;background:radial-gradient(ellipse at 50% 40%,#d5c6c3 0%,#7e6b72 36%,#1a1118 68%,#030204 72%);clip-path:polygon(18% 10%,39% 0,63% 2%,82% 17%,91% 43%,80% 70%,67% 87%,60% 100%,39% 100%,31% 85%,15% 69%,7% 42%);position:relative}
+.eye{position:absolute;top:35%;width:24%;height:17%;background:#ff263f;box-shadow:0 0 28px 12px #e50028;border-radius:50% 50% 42% 42%;clip-path:polygon(0 0,100% 10%,70% 100%,30% 100%)}
+.eye.left{left:20%;transform:rotate(12deg)}.eye.right{right:20%;transform:scaleX(-1) rotate(12deg)}
+.mouth{position:absolute;top:61%;left:35%;width:30%;height:20%;border-top:5px solid #14080d;border-bottom:8px solid #14080d;background:repeating-linear-gradient(90deg,#d8c6c8 0 5px,#24121a 5px 9px);transform:rotate(-5deg)}
+.scare-text{position:absolute;bottom:7%;font:clamp(1rem,4vw,1.6rem) 'Cinzel',serif;color:#fff;letter-spacing:.2em;text-shadow:0 0 20px red}
+@keyframes shake{0%,100%{transform:translate(0)}15%{transform:translate(-8px,3px)}30%{transform:translate(8px,-3px)}45%{transform:translate(-5px,-4px)}60%{transform:translate(5px,4px)}75%{transform:translate(-3px,2px)}}
+#scareOverlay.show .scare-face{animation:shake .42s linear}
+body.red-alert{animation:redflash .42s linear 2}
+@keyframes redflash{0%,100%{background:#080609}50%{background:#5b0011}}
+#soundHint{font-size:.75rem;color:#8b7a85;margin-top:15px}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+@media(max-width:520px){.screen{padding:22px 17px}.terminal{padding:16px}.choices>*{width:100%;max-width:310px}.mansion{height:28vh}}
+
+/* NIGHTMARE UPGRADE — cinematic layers */
+:root{--mx:50vw;--my:40vh;--blood:#b90e2b}
+body{background:radial-gradient(ellipse at var(--mx) var(--my),#24101b 0,transparent 38%),radial-gradient(ellipse at 50% 100%,#210811 0,transparent 55%),#050407}
+body:after{background:radial-gradient(ellipse at var(--mx) var(--my),transparent 0,rgba(0,0,0,.28) 24%,rgba(0,0,0,.9) 100%)}
+.screen{isolation:isolate}
+.hero:before{content:"";position:absolute;inset:-10% -4%;z-index:-1;background:radial-gradient(ellipse,#8d10221c,transparent 65%);filter:blur(18px);animation:heartbeat 5s ease-in-out infinite}
+@keyframes heartbeat{0%,100%{opacity:.35;transform:scale(.96)}50%{opacity:.9;transform:scale(1.04)}}
+.mist{opacity:.35;background:radial-gradient(ellipse at 15% 75%,#b5a4b31b 0,transparent 36%),radial-gradient(ellipse at 80% 60%,#b5a4b31c 0,transparent 32%),linear-gradient(105deg,transparent 10%,#b4a2b31a 40%,transparent 65%);filter:blur(8px);animation:mist 19s ease-in-out infinite alternate}
+.mansion{filter:drop-shadow(0 0 24px #8d0c2440);animation:mansionBreath 7s ease-in-out infinite alternate}
+@keyframes mansionBreath{from{opacity:.15;transform:scale(1)}to{opacity:.32;transform:scale(1.025)}}
+@keyframes heartbeat{0%,100%{opacity:.35;transform:scale(.96)}50%{opacity:.9;transform:scale(1.04)}}
+.primary{position:relative;overflow:hidden}
+.primary:before{content:"";position:absolute;inset:-80% auto -80% -35%;width:22%;transform:rotate(25deg);background:#ffffff22;transition:left .7s}
+.primary:hover:before{left:120%}
+.terminal{position:relative;overflow:hidden}
+.terminal:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 4px,#ffeff006 5px 6px);opacity:.45}
+.chapter{animation:chapterGlow 3s ease-in-out infinite alternate}
+@keyframes chapterGlow{to{text-shadow:0 0 14px #d21c3d80;color:#ef6371}}
+#nightCanvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;opacity:.8}
+#omen{position:fixed;left:18px;bottom:18px;z-index:8;color:#a78c97;font-size:.72rem;letter-spacing:.04em;background:#09060bd9;border:1px solid #4b2532;padding:10px 13px;max-width:220px;opacity:0;transform:translateY(8px);transition:.4s;pointer-events:none}
+#omen.show{opacity:1;transform:translateY(0)}
+#runeLayer{position:fixed;inset:0;z-index:7;pointer-events:none}
+.rune{position:absolute;pointer-events:auto;border:0;background:transparent;color:#d62846;font-size:1.2rem;text-shadow:0 0 14px #f11e47;opacity:.25;transition:.25s;animation:runePulse 4s ease-in-out infinite;cursor:pointer}
+.rune:hover,.rune.found{opacity:1;transform:scale(1.4);filter:drop-shadow(0 0 12px #ff1744)}
+.rune:nth-child(1){top:18%;left:13%}.rune:nth-child(2){top:63%;right:12%;animation-delay:1s}.rune:nth-child(3){bottom:17%;left:27%}
+@keyframes runePulse{50%{opacity:.06}}
+#secretToast{position:fixed;z-index:25;inset:auto 50% 24px auto;transform:translateX(50%) translateY(20px);opacity:0;pointer-events:none;background:#100810;border:1px solid #8f243b;color:#f3dfe5;padding:14px 20px;max-width:min(90vw,420px);text-align:center;box-shadow:0 0 45px #6b0b2344;transition:.35s}
+#secretToast.show{opacity:1;transform:translateX(50%) translateY(0)}
+#scareOverlay{background:radial-gradient(ellipse at center,#24000c,#030204 65%);overflow:hidden}
+#scareOverlay:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,#ff12300a 4px 5px);pointer-events:none}
+.scare-face{filter:drop-shadow(0 0 42px #ff002f);transform:scale(.92)}
+#scareOverlay.show .scare-face{animation:shake .42s linear,faceIn .16s ease-out}
+@keyframes faceIn{from{transform:scale(.1) rotate(-8deg);opacity:0}to{transform:scale(1);opacity:1}}
+body.red-alert{animation:redflash .2s linear 4}
+@keyframes redflash{0%,100%{background-color:#050407}50%{background-color:#790019}}
+.final-card{position:relative;overflow:hidden}
+.final-card:before{content:"";position:absolute;inset:-100% -50%;background:linear-gradient(110deg,transparent 42%,#ffdae20b 50%,transparent 58%);animation:revealShine 7s linear infinite;pointer-events:none}
+@keyframes revealShine{to{transform:translateX(45%)}}
+@media(max-width:520px){#omen{left:10px;bottom:10px;font-size:.65rem;max-width:180px}.rune{font-size:1rem}}
+
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div><div class="mist"></div>
+<canvas id="nightCanvas" aria-hidden="true"></canvas>
+<div id="runeLayer" aria-label="سرنخ‌های پنهان">
+<button class="rune" aria-label="سرنخ پنهان یک" data-rune="0">✣</button>
+<button class="rune" aria-label="سرنخ پنهان دو" data-rune="1">☽</button>
+<button class="rune" aria-label="سرنخ پنهان سه" data-rune="2">✦</button>
+</div>
+<div id="omen" role="status"></div><div id="secretToast" role="status"></div>
+<svg class="mansion" viewBox="0 0 900 330" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<path fill="#000" d="M0 330V230h90v-72l65-35 65 35v-55l55-40 55 40v95h48V92l70-65 70 65v80h40v-60l55-35 55 35v85h70v-55l40-25 40 25v188z"/>
+<path stroke="#8c3341" stroke-width="2" fill="none" d="M115 330V180h75v150M285 330V80h55v250M430 330V105h65v225M610 330V135h65v195"/>
+<path fill="#8d1e32" opacity=".45" d="M130 210h20v35h-20zm175-95h20v35h-20zm145 20h20v38h-20zm180 25h20v38h-20z"/>
+</svg>
+<main>
+<section class="screen" id="intro">
+<div class="hero">
+<div class="eyebrow flicker">یک تجربه‌ی هالووین</div>
+<h1>THE BLACKWOOD<span>ESTATE</span></h1>
+<div class="rule"></div>
+<p class="subtitle">سما، یک دعوت‌نامه‌ی عجیب به دستت رسیده.<br>می‌گن هیچ‌کس از عمارت بلک‌وود بدون کشف راز اون بیرون نرفته...</p>
+<button class="primary" id="enterBtn">وارد عمارت شو <span class="cinzel"> / ENTER</span></button>
+<p class="micro">بهتره با هدفون تجربه‌اش کنی. صدا فقط با اجازه‌ی خودت فعال می‌شه.</p>
+<svg viewBox="0 0 100 100" width="42" height="42" style="margin-top:32px;opacity:.7" aria-hidden="true"><path d="M50 5 60 28 84 18 73 42 96 50 73 58 84 82 60 72 50 95 40 72 16 82 27 58 4 50 27 42 16 18 40 28Z" fill="none" stroke="#a52b40" stroke-width="1"/></svg>
+</div>
+</section>
+<section class="screen hidden" id="story1">
+<div class="story-wrap">
+<div class="chapter">فصل اول — ورود</div>
+<h2 class="story-title">عمارت تو رو می‌شناسه، سما.</h2>
+<p class="story-copy">درِ بزرگ پشت سرت بسته شد. صدای قدم‌هایی از طبقه‌ی بالا می‌آد... اما نگهبان عمارت قسم می‌خوره که سال‌هاست اینجا تنهاست.</p>
+<div class="terminal"><div class="terminal-label">سامانه‌ی امنیتی بلک‌وود</div><div class="terminal-line" id="line1"></div></div>
+<div class="choices"><button class="primary" id="lookBtn">به سمت صدا برو</button><button class="secondary" id="leaveBtn">دنبال راه خروج بگرد</button></div>
+<p id="soundHint">صدای محیط اختیاری است؛ برای فعال کردنش دکمه‌ی پایین را بزن.</p><div id="runeCounter">سه نشانه در عمارت پنهان شده‌اند… اگر پیدایشان کنی، راز دیگری باز می‌شود.</div>
+<button class="secondary" id="soundBtn" style="margin-top:10px">فعال‌کردن صدای مرموز</button>
+</div>
+</section>
+<section class="screen hidden" id="story2">
+<div class="story-wrap">
+<div class="chapter">فصل دوم — پرتره</div>
+<h2 class="story-title">یک تصویر قدیمی</h2>
+<p class="story-copy">روی دیوار، قاب عکسی خاک‌گرفته می‌بینی. چهره‌ی داخل قاب تار است؛ اما پشت آن یک کلید و نوشته‌ای پنهان شده.</p>
+<div class="terminal"><div class="terminal-label">یادداشت دست‌نویس / ۳۱ اکتبر</div><div class="terminal-line" id="line2"></div></div>
+<p class="story-copy">روی کلید حک شده: <span class="cinzel" style="color:#d54a5b">S — 31 — ♥</span></p>
+<div class="choices"><button class="primary" id="keyBtn">قفل اتاق آخر را باز کن</button></div>
+</div>
+</section>
+<section class="screen hidden" id="story3">
+<div class="story-wrap">
+<div class="chapter">فصل سوم — پشت سرت را نگاه نکن</div>
+<h2 class="story-title">پشت سرت رو نگاه نکن.</h2>
+<p class="story-copy">صدای نفس کشیدن درست پشت سرته. روی در نوشته شده: «برای دیدن راز، سه ثانیه صبر کن.»</p>
+<div class="terminal"><div class="terminal-label">شمارش معکوس</div><div class="terminal-line" id="countdown">03</div></div>
+<div class="choices"><button class="primary" id="revealBtn">راز رو آشکار کن</button></div>
+</div>
+</section>
+<section class="screen hidden" id="ending">
+<div class="story-wrap">
+<div class="chapter">راز عمارت آشکار شد</div>
+<div class="final-card">
+<div class="symbol">✦</div>
+<div class="secret">راز عمارت این بود که...<br><span>تو از اول مهمون ویژه‌ی من بودی.</span></div>
+<div class="rule"></div>
+<p class="story-copy">سما، هالووین مبارک! 🎃<br>شاید این عمارت پر از سایه و راز باشه، اما قشنگ‌ترین اتفاق امشب اینه که تونستم یه لبخند روی لبت بیارم.</p>
+<p class="story-copy" style="color:#e7b7c0">بعضی رازها برای ترسوندن نیستن؛ برای اینن که به یه نفر بگن چقدر خاصه. 🖤</p>
+<div class="eyebrow" style="margin:26px 0 0;letter-spacing:.18em">هالووین مبارک، سما</div>
+</div>
+<button class="secondary" id="restartBtn" style="margin-top:22px">از اول تجربه کن ↻</button>
+<div class="footer cinzel">ساخته‌شده با کمی رمز و راز · ۳۱ اکتبر</div>
+</div>
+</section>
+</main>
+<div id="scareOverlay" role="dialog" aria-label="یک لحظه ترسناک" aria-modal="true">
+<div class="scare-face" aria-hidden="true"><div class="skull"></div><div class="eye left"></div><div class="eye right"></div><div class="mouth"></div></div>
+<div class="scare-text">پشت سرت را نگاه نکن</div>
+<button class="secondary" id="closeScare" style="position:absolute;bottom:3%;left:50%;transform:translateX(-50%)">ادامه بده</button>
+</div>
+<script>
+const sections=['intro','story1','story2','story3','ending'];
+const progress=document.getElementById('progress');
+let audioCtx=null, soundOn=false, countdownTimer=null;
+function showSection(id){sections.forEach(s=>document.getElementById(s).classList.toggle('hidden',s!==id));progress.style.width=((sections.indexOf(id)+1)/sections.length*100)+'%';window.scrollTo({top:0,behavior:'smooth'});}
+function typeText(el,text,speed=34){el.textContent='';let i=0;const timer=setInterval(()=>{el.textContent+=text[i++]||'';if(i>=text.length)clearInterval(timer)},speed);}
+function tone(freq=130,duration=.16,kind='sine',volume=.04){if(!soundOn)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=kind;o.frequency.value=freq;g.gain.value=volume;o.connect(g);g.connect(audioCtx.destination);o.start();g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+duration);o.stop(audioCtx.currentTime+duration)}catch(e){}}
+function ambience(){if(!soundOn)return;let n=0;const loop=()=>{if(!soundOn)return;tone(68+Math.random()*35,1.4,'sine',.012);n++;setTimeout(loop,1800+Math.random()*1700)};loop()}
+let finalScare=false;
+function jumpScare(){finalScare=false;const overlay=document.getElementById('scareOverlay');overlay.classList.add('show');document.body.classList.add('red-alert');tone(75,.55,'sawtooth',.07);setTimeout(()=>document.body.classList.remove('red-alert'),900);setTimeout(()=>{overlay.classList.remove('show');showSection('story2');typeText(document.getElementById('line2'),'اگر این نوشته را می‌خوانی، یعنی شجاعتش را داشتی. راز آخر پشت آخرین در منتظر توست...',32)},1700)}
+document.getElementById('enterBtn').addEventListener('click',()=>{showSection('story1');typeText(document.getElementById('line1'),'VISITOR IDENTIFIED: SAMA\\nSTATUS: EXPECTED\\nWARNING: SOMETHING IS FOLLOWING YOU...',30);tone(110,.3,'triangle',.035)});
+document.getElementById('lookBtn').addEventListener('click',()=>{tone(95,.35,'triangle',.04);jumpScare()});
+document.getElementById('leaveBtn').addEventListener('click',()=>{typeText(document.getElementById('line1'),'EXIT LOCKED.\\nNICE TRY, SAMA.\\nTHE HOUSE HAS A SECRET FOR YOU...',28);tone(80,.5,'sawtooth',.04);setTimeout(()=>jumpScare(),1700)});
+document.getElementById('soundBtn').addEventListener('click',()=>{soundOn=!soundOn;document.getElementById('soundBtn').textContent=soundOn?'خاموش‌کردن صدای مرموز':'فعال‌کردن صدای مرموز';document.getElementById('soundHint').textContent=soundOn?'صدای محیط روشن است. هر وقت خواستی می‌توانی خاموشش کنی.':'صدای محیط خاموش است.';if(soundOn){ambience();tone(180,.25,'sine',.03)}});
+document.getElementById('keyBtn').addEventListener('click',()=>{showSection('story3');let n=3;const el=document.getElementById('countdown');el.textContent='03';clearInterval(countdownTimer);countdownTimer=setInterval(()=>{n--;el.textContent=n>0?'0'+n:'اکنون';tone(100+n*30,.12,'sine',.025);if(n<=0)clearInterval(countdownTimer)},1000)});
+document.getElementById('revealBtn').addEventListener('click',()=>{jumpScareFinal()});
+function jumpScareFinal(){finalScare=true;const overlay=document.getElementById('scareOverlay');overlay.classList.add('show');document.body.classList.add('red-alert');tone(68,.65,'sawtooth',.08);setTimeout(()=>{overlay.classList.remove('show');document.body.classList.remove('red-alert');showSection('ending')},1900)}
+document.getElementById('closeScare').addEventListener('click',()=>{document.getElementById('scareOverlay').classList.remove('show');document.body.classList.remove('red-alert');if(finalScare){showSection('ending');finalScare=false}else{showSection('story2');typeText(document.getElementById('line2'),'اگر این نوشته را می‌خوانی، یعنی شجاعتش را داشتی. راز آخر پشت آخرین در منتظر توست...',32)}});
+document.getElementById('restartBtn').addEventListener('click',()=>{clearInterval(countdownTimer);soundOn=false;document.getElementById('soundBtn').textContent='فعال‌کردن صدای مرموز';document.getElementById('soundHint').textContent='صدای محیط اختیاری است؛ برای فعال کردنش دکمه‌ی پایین را بزن.';showSection('intro')});
+
+// Cinematic particle field: drifting ash and pointer-reactive light.
+(function(){
+ const canvas=document.getElementById('nightCanvas'),ctx=canvas.getContext('2d');
+ let w=0,h=0,dpr=1,particles=[],mouse={x:innerWidth/2,y:innerHeight/2};
+ function resize(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);particles=Array.from({length:Math.min(90,Math.floor(w/9))},()=>({x:Math.random()*w,y:Math.random()*h,r:.4+Math.random()*1.8,v:.12+Math.random()*.42,a:.08+Math.random()*.42,phase:Math.random()*6.28}))}
+ addEventListener('resize',resize);addEventListener('pointermove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;document.documentElement.style.setProperty('--mx',mouse.x+'px');document.documentElement.style.setProperty('--my',mouse.y+'px')},{passive:true});resize();
+ function draw(){ctx.clearRect(0,0,w,h);const t=Date.now()/1000;for(const p of particles){p.y-=p.v;p.x+=Math.sin(t+p.phase)*.24;if(p.y<-5){p.y=h+5;p.x=Math.random()*w}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(204,95,117,'+p.a+')';ctx.fill()}requestAnimationFrame(draw)}draw();
+})();
+const omen=document.getElementById('omen'),toast=document.getElementById('secretToast');
+let omenTimer,toastTimer,foundRunes=new Set(),lastOmen=0;
+function whisper(text){omen.textContent=text;omen.classList.add('show');clearTimeout(omenTimer);omenTimer=setTimeout(()=>omen.classList.remove('show'),3600)}
+function toastMessage(text){toast.textContent=text;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),3600)}
+const whispers=['فکر کردی اینجا تنهایی؟','یکی از پنجره‌ها همین الان روشن شد…','اسم تو روی دیوار نوشته شده.','صدای قدم‌ها قطع شد؛ این از همه بدتره.'];
+setInterval(()=>{if(Date.now()-lastOmen>18000 && Math.random()>.35){lastOmen=Date.now();whisper(whispers[Math.floor(Math.random()*whispers.length)])}},9000);
+document.querySelectorAll('.rune').forEach(btn=>btn.addEventListener('click',()=>{
+ const i=Number(btn.dataset.rune);if(foundRunes.has(i))return;foundRunes.add(i);btn.classList.add('found');btn.textContent=['☠','♜','♥'][i];tone(180+i*55,.32,'triangle',.035);
+ const counter=document.getElementById('runeCounter');if(counter)counter.textContent=`${['اولین','دومین','سومین'][foundRunes.size-1]} نشانه پیدا شد؛ ${3-foundRunes.size} نشانه باقی مانده.`;
+ if(foundRunes.size===1)toastMessage('زیر گرد و خاک زمزمه‌ای می‌شنوی: «کلید، همیشه از قبل آنجاست…»');
+ if(foundRunes.size===2)toastMessage('دو نشانه با هم می‌درخشند. انگار عمارت دارد بیدار می‌شود.');
+ if(foundRunes.size===3){toastMessage('راز پنهان باز شد: سما، حتی تاریک‌ترین عمارت هم برای مهمان ویژه‌اش چراغی روشن می‌کند. 🖤');document.body.classList.add('red-alert');setTimeout(()=>document.body.classList.remove('red-alert'),700)}
+}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('scareOverlay').classList.remove('show');document.body.classList.remove('red-alert')}});
+
+</script>
+</body>
+</html>
